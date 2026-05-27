@@ -900,10 +900,10 @@ with tab_matrix:
 
     styled = (
         display_df.style
-        .applymap(style_status, subset=["Status"])
-        .applymap(style_sev,    subset=["AI Severity"])
-        .applymap(style_health, subset=["Health Score"])
-        .applymap(style_speed,  subset=["Speed (km/h)"])
+        .map(style_status, subset=["Status"])
+        .map(style_sev,    subset=["AI Severity"])
+        .map(style_health, subset=["Health Score"])
+        .map(style_speed,  subset=["Speed (km/h)"])
         .set_properties(**{"background-color":"#0d1117","color":"#d0d7de","border-color":"#21262d"})
         .set_table_styles([
             {"selector":"thead th","props":[
