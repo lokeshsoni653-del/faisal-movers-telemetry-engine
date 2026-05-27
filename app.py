@@ -485,8 +485,8 @@ def style_speed(val):
 
 styled = (
     display_df.style
-    .applymap(style_status, subset=["Status"])
-    .applymap(style_speed,  subset=["Speed (km/h)"])
+    .map(style_status, subset=["Status"])
+    .map(style_speed,  subset=["Speed (km/h)"])
     .set_properties(**{
         "background-color": "#161b22",
         "color":            "#e6edf3",
